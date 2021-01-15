@@ -9,6 +9,8 @@ echo "------> Generating .profile.d file to generate google-credentials.json at 
 mkdir -p $BUILD_DIR/.profile.d
 CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_CREDENTIALS)
 echo ${CREDENTIALS@Q} > $BUILD_DIR/google-credentials.json
+pwd
+ls -la $BUILD_DIR
 # echo "echo ${CREDENTIALS@Q} > /app/google-credentials.json & cat /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
 # cat ${BUILD_DIR}/.profile.d/google-credentials.sh
 # chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
